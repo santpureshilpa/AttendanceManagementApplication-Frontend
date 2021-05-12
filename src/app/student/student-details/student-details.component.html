@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+
+    <li class="nav-item active">
+      <a class="navbar-brand" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/add" routerLinkActive="active" (click)="gotoaddstudent()">Add Student</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/students" routerLinkActive="active" (click)="gotoStudentList()">Students List</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav ml-auto" style="margin-right: 0px;">
+    <li class="nav-item">
+      <div class="nav-link" style="float: right; margin-right: 10px;" (click)="goToAdminHomePage()">Home</div>
+    </li>
+    <li class="nav-item">
+      <div class="nav-link" style="float: right; margin-right: 10px;" (click)="goToLoginPage()">Log Out</div>
+    </li>
+
+  </ul>
+
+
+</nav>
+<div class="container-fluid">
+  <br>
+  <hr>
+</div>
+<footer class="footer">
+  <div class="container">
+    <span>All Rights Reserved 2021 @shilpa</span>
+  </div>
+</footer>
+
+<h2>Student Details</h2>
+<hr />
+<div *ngIf="student">
+  <div>
+    <label><b>Student Id: </b></label> {{student.studentId}}
+  </div>
+  <div>
+    <label><b>First Name: </b></label> {{student.firstName}}
+  </div>
+  <div>
+    <label><b>Last Name: </b></label> {{student.lastName}}
+  </div>
+  <div>
+    <label><b>Gender: </b></label> {{student.gender}}
+  </div>
+  <div>
+    <label><b>Semester: </b></label> {{student.semester}}
+  </div>
+  <div>
+    <label><b>Student Mobile no: </b></label> {{student.mobileNumber}}
+  </div>
+  <div>
+    <label><b>Student email: </b></label> {{student.emailId}}
+  </div>
+  <div>
+    <label><b>Father email: </b></label> {{student.fatherEmailId}}
+  </div>
+  <div>
+    <label><b>Father mobile no: </b></label> {{student.fatherMobileNumber}}
+  </div>
+  <div>
+    <label><b>Student dob: </b></label> {{student.dateOfBirth}}
+  </div>
+  <div>
+    <label><b>Course Id: </b></label> {{student.courseId}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="gotoStudentList()" class="btn btn-primary">Back to Student List</button><br>

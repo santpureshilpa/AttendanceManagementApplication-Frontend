@@ -1,0 +1,60 @@
+
+input.ng-invalid{
+    border-left: 5px solid red;
+}
+input.ng-valid{
+    border-left: 5px solid green;
+}
+textarea.ng-invalid{
+    border-left: 5px solid red;
+}
+textarea.ng-valid{
+    border-left: 5px solid green;
+}
+.error
+{
+    color: red;
+}
+.form-control.ng-touched.ng-invalid
+{
+    
+    border: 1px solid red;
+}
+.form-control.ng-touched.ng-valid
+{
+    border: 1px solid green;
+}
+nav{
+    background-color:rgb(63, 101, 136);
+}
+
+.container-fluid{
+    margin :0px;
+    padding : 0px;
+}
+
+.navbar-brand {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor : pointer;
+}
+
+.navbar-dark .navbar-brand {
+    color: #fff;
+}
+
+.navbar-collapse .navbar-nav #p{
+    margin-left :1100px;
+ }
+.navbar-collapse .navbar-nav #l{
+    margin-left :0.1rem;
+ } 
+
+ .nav-link{
+    cursor : pointer;
+}

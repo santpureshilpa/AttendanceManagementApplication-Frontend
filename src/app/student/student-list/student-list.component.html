@@ -1,0 +1,99 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+
+    <li class="nav-item active">
+      <a class="navbar-brand" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/add" routerLinkActive="active" (click)="gotoaddstudent()">Add Student</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/students" routerLinkActive="active" (click)="gotoStudentList()">Students List</a>
+    </li>
+  </ul>
+  <ul class="navbar-nav ml-auto" style="margin-right: 0px;">
+    <li class="nav-item">
+      <div class="nav-link" style="float: right; margin-right: 10px;" (click)="goToAdminHomePage()">Home</div>
+    </li>
+    <li class="nav-item">
+      <div class="nav-link" style="float: right; margin-right: 10px;" (click)="goToLoginPage()">Log Out</div>
+    </li>
+
+  </ul>
+
+
+</nav>
+
+<br>
+<h3 style="text-align: center;">List of Students</h3>
+<hr>
+
+<footer class="footer">
+  <div class="container">
+    <span>All Rights Reserved 2021 @shilpa</span>
+  </div>
+</footer>
+<div class='card-body'>
+  <div class='row'>
+    <div class='col-md-3'>Search by ID/firstname/lastname:</div>
+    <div class='col-md-4'>
+      <input type='search' placeholder="studentId/firstName/lastName" size="30" [(ngModel)]="listFilter"
+        (input)="filter_student()">
+    </div>
+  </div>
+  <div class='row'>
+
+    <!-- <div class='col-md-6'>
+          <h4>Filtered by:{{listFilter}}</h4>
+        </div> -->
+  </div>
+</div>
+
+
+<cdk-virtual-scroll-viewport itemSize="100" class="container-fluid">
+  <table class="table table-striped table-bordered table-hover w-auto">
+    <thead class="thead-dark">
+      <tr>
+        <th>Course ID</th>
+        <th>Student ID</th>
+        <th>Student firstName</th>
+        <th>Student lastName</th>
+        <th>Student gender</th>
+        <th>Student semester</th>
+        <th>Student mobile no.</th>
+        <th>Student email</th>
+        <!-- <th>Father email</th> -->
+        <th>Father mobile no.</th>
+        <th>Student Date_of_Birth</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *cdkVirtualFor=" let student of students" class="num">
+
+        <td>{{student.courseId}}</td>
+        <td>{{student.studentId}}</td>
+        <td>{{student.firstName}}</td>
+        <td>{{student.lastName}}</td>
+        <td>{{student.gender}}</td>
+        <td>{{student.semester}}</td>
+        <td>{{student.mobileNumber}}</td>
+        <td>{{student.emailId}}</td>
+        <!-- <td>{{student.fatherEmailId}}</td> -->
+        <td>{{student.fatherMobileNumber}}</td>
+        <td>{{student.dateOfBirth}}</td>
+        <td><button (click)="deleteStudent(student.studentId)" class="btn btn-danger">Delete</button>
+          <button (click)="updateStudent(student.studentId)" class="btn btn-info" style="margin: 10px">Update</button>
+          <button (click)="studentDetails(student.studentId)" class="btn btn-primary"
+            style="margin-left: 10px">Details</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</cdk-virtual-scroll-viewport>
+
+<div class="footer" style="background-color: #0C1227;">
+  <span>
+      All Rights Reserved 2021 @Attendance Management Application
+  </span>
+</div>

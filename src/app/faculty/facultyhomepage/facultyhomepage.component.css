@@ -1,0 +1,21 @@
+.bg-image{
+
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right,rgba(100, 100, 100, 0.3),rgba(187, 102, 23, 0.726)),url(src/background.jpg) ;
+    background-position: center;
+    background-size:cover;
+    position: absolute;
+    filter: contrast(90%);
+    -webkit-filter: brightness(100%) contrast(110%);
+
+}
+
+.heading{
+    color: white;
+    margin: 300px 400px;
+    size: 1000%;
+}
+.nav-link{
+    cursor: pointer;
+}

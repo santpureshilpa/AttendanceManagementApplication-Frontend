@@ -1,0 +1,17 @@
+.btn{
+    margin: 5px;
+}
+.container-fluid{
+    height: 400px;
+
+}
+.num{
+    border: 1px;
+    height: 70px;
+}
+.nav-link{
+    cursor: pointer;
+}
+.table-striped{
+    border: black;
+}

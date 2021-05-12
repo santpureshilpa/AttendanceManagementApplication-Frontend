@@ -1,0 +1,54 @@
+.bg-image{
+
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right,rgba(100, 100, 100, 0.3),rgba(187, 102, 23, 0.726)),url(https://preview.colorlib.com/theme/fox/images/bg_1.jpg) ;
+    background-position: center;
+    background-size:cover;
+    position: absolute;
+    filter: contrast(90%);
+    -webkit-filter: brightness(100%) contrast(110%);
+
+}
+.container-fluid{
+    position: relative;
+    font-family: sans-serif;
+    color: white;
+  }
+  h1.head{
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 200px;
+    font-size: 50;
+    width: 1000px;
+    font-family: "Poppins", Arial, sans-serif
+  }
+  p.head{
+  
+    padding-right: 400px;
+    padding-left: 50px;
+    width: 1000px
+    
+  }
+  
+  .row{
+      position: relative;
+      bottom: 0;
+      top: 1000;
+      padding-top: 250px;
+      height: auto;
+  }
+  .active>.nav-link{
+      color: floralwhite;
+  }
+  .nav-link{
+      color: grey;
+  }
+  .col-sm-3{
+    padding-top: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  

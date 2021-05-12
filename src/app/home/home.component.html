@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Admin Home</title>
+    </head>
+      
+    <body>
+          
+      <div class="navbar navbar-expand-sm" style="background-color: #0C1227;">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="facultyhomepage" class="nav-link" (click)="goToFacultyHome()">Faculty</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="coursehomepage" (click)="goToCourseHome()">Course</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" (click)="goToSubject()">Subject</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" (click)="goToStudentHome()">Student</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link" (click)="goToLoginPage()" style="text-align: end;">Log Out</div>
+            </li>
+          
+        </ul>
+    </div>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="bg-image">    
+        <div class="container-fluid"><br><br>
+          <h1 class="head"><b>Welcome to Attendance Management App</b><br><br></h1>
+          <p class="head" style="font-size: 17;">This is an attendance management web application. You can find every possible feature in just a click</p>
+            <div class="row">
+              <div class="col-sm-3" style="background-color: #0E1227; color: #FDFDFD;">
+                <h3>Certified Teachers</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+              <div class="col-sm-3" style="background-color: #FE6002; color: #FDFDFD;">
+                <h3>Special Education</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+              <div class="col-sm-3" style="background-color: #0E1227; color: #FDFDFD;">
+                <h3>Book & Library</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+              <div class="col-sm-3" style="background-color: #FE6002; color: #FDFDFD;">
+                <h3>Sport Clubs</h3>
+                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+              </div>
+            </div>
+          </div>
+    </div>    
+
+    </body>
+</html>

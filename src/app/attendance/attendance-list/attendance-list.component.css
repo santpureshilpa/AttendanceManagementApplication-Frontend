@@ -1,0 +1,71 @@
+h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.table-striped{
+    margin-top:10px;
+}
+
+th{
+    font-size: 20px;
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #212529;
+    border-color: #212529;
+} 
+
+.container{
+    margin-top: 20px;
+    height : 400px;
+}
+
+.num{
+    height : 100px;
+}
+
+.col-md-2{
+    width: 300px;
+}
+
+
+
+.navbar-brand {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor : pointer;
+}
+
+.navbar-dark .navbar-brand {
+    color: #fff;
+}
+
+.navbar-collapse .navbar-nav #p{
+   margin-left :1170px;
+}
+.navbar-collapse .navbar-nav #l{
+    margin-left :0.1rem;
+ }
+
+ .nav-link{
+    cursor : pointer;
+}
+
+.body{
+    color: #505253;
+ }
+

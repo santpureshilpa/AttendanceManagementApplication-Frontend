@@ -1,0 +1,29 @@
+h1
+{
+    color:blue;
+}
+input.ng-invalid{
+    border-left: 5px solid red;
+}
+.error
+{
+    color: red;
+}
+.form-control.ng-touched.ng-invalid
+{
+    
+    border: 1px solid red;
+}
+.form-control.ng-touched.ng-valid
+{
+    border: 1px solid green;
+}
+.form-group{
+    padding: 0px;
+}
+.nav-link{
+    cursor: pointer;
+}
+input:focus::placeholder {
+    color: transparent;
+  }

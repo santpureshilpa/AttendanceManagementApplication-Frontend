@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a (click)='goToHomePage()' class="navbar-brand">Attendance</a>
+  <div class="collapse navbar-collapse" id="navbarMenu">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a (click)="goToAttendanceList()" class="nav-link">Attendance List</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="goToCreateAttendance()" class="nav-link">Add Attendance</a>
+      </li>
+      <li class="nav-item" id="p">
+        <a href="#" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item" id="l">
+        <a href="#" class="nav-link">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="container">
+  <h2>Attendance List</h2>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-2"><b>Search By Roll Number or Status:</b></div>
+      <div class="col-md-4">
+        <input type="text" placeholder="Roll Number or Status" [(ngModel)]="listFilter" (input)="filter_Attendance()">
+      </div>
+    </div>
+  </div>
+
+
+
+  <cdk-virtual-scroll-viewport itemSize="100" class="container">
+    <div class="scroll">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Roll Number</th>
+            <th>Subject Id</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *cdkVirtualFor="let attendance of attendances" class="num">
+            <td>{{attendance.attendanceId}}</td>
+            <td>{{attendance.currentDate}}</td>
+            <td>{{attendance.status}}</td>
+            <td>{{attendance.studentId}}</td>
+            <td>{{attendance.subjectId}}</td>
+            <td>
+              <button (click)="updateAttendance(attendance.attendanceId)" class="btn btn-success">Update</button>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>
+
+
+<footer class="footer">
+  <div class="container-fluid">
+    <span>All Rights Reserved 2021 @Vermaji</span>
+  </div>
+</footer>

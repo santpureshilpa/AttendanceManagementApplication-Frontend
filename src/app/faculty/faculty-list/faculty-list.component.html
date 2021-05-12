@@ -1,0 +1,78 @@
+<div class="navbar navbar-expand-sm navbar-dark" style="background-color: #0C1227;">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <div class="navbar-brand">Home </div>
+    </li>
+    <li class="nav-item">
+      <a routerLink="faculties" routerLinkActive="active" class="nav-link">Faculty List </a>
+
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="goToAddFaculty()">Add Faculty
+      </a>
+    </li>
+  </ul>
+  <ul class="navbar-nav ml-auto" style="margin-right: 0px;">
+    <li class="nav-item">
+      <div class="nav-link" style="float: right; margin-right: 10px;" (click)="goToAdminHomePage()">Home</div>
+    </li>
+    <li class="nav-item">
+      <div class="nav-link" style="float: right; margin-right: 10px;" (click)="goToLoginPage()">Log Out</div>
+    </li>
+
+  </ul>
+</div>
+
+<br>
+<h1 style="text-align: center;">Faculty List</h1><br>
+<!-- <div class='card-body'> -->
+  <div class='row'>
+    <div class='col-md-2'>Filter by:</div>
+    <div class='col-md-4'>
+      <input type='search' placeholder="Id / First Name" [(ngModel)]="listFilter" (input)="filter_faculty()">
+    </div>
+  </div>
+  <br>
+<!-- </div> -->
+<cdk-virtual-scroll-viewport itemSize='100px' class="container-fluid">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Faculty_id</th>
+        <th>First_Name</th>
+        <th>Last_Name</th>
+        <th>Email_ID</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Date_of_Birth</th>
+        <th>Gender</th>
+        <th>Mobile_Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *cdkVirtualFor="let faculty of faculty" class="num">
+        <td>{{faculty.facultyId}}</td>
+        <td>{{faculty.firstName}}</td>
+        <td>{{faculty.lastName}}</td>
+        <td>{{faculty.emailId}}</td>
+        <td>{{faculty.userName}}</td>
+        <td>{{faculty.password}}</td>
+        <td>{{faculty.dateOfBirth}}</td>
+        <td>{{faculty.gender}}</td>
+        <td>{{faculty.mobileNo}}</td>
+        <td>
+          <button (click)="updateFaculty(faculty.facultyId)" class="btn" style="background-color: orange;">Update</button>
+          <button (click)="deleteFaculty(faculty.facultyId)" class="btn" style="background-color: red;">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</cdk-virtual-scroll-viewport>
+
+
+<div class="footer" style="background-color: #0C1227;">
+  <span>
+      All Rights Reserved 2021 @Angular
+  </span>
+</div>
